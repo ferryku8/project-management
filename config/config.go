@@ -39,7 +39,7 @@ func LoadEnv() {
 		DBHost:           getEnv("DB_HOST", "localhost"),
 		DBPort:           getEnv("DB_PORT", "5432"),
 		DBUser:           getEnv("DB_USER", "postgres"),
-		DBPassword:       getEnv("DB_PASSWORD", "!=3rr7__!4_1rNi4W@N"),
+		DBPassword:       getEnv("DB_PASSWORD", ""),
 		DBName:           getEnv("DB_NAME", "project_management"),
 		JWTSecret:        getEnv("JWT_SECRET", "rahasia"),
 		JWTExpireMinutes: getEnv("JWT_EXPIRY_MINUTES", "60"),
