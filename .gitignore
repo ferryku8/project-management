@@ -1,0 +1,23 @@
+# --- Build Output (File Hasil Compile) ---
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+/bin/
+/dist/
+
+# --- Environment Variables (RAHASIA) ---
+.env
+.env.local
+
+# --- Dependency ---
+# Folder vendor biasanya tidak di-upload jika menggunakan Go Modules
+vendor/
+
+# --- Editor/IDE & OS Files ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
