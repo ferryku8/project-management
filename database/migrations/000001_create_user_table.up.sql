@@ -8,7 +8,7 @@ CREATE TABLE users(
     role varchar(50) NOT NULL DEFAULT 'user',
     created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
-    deleted_at TIMESTAMPTZ NULL
+    deleted_at TIMESTAMPTZ NULL,
     public_id UUID NOT NULL DEFAULT gen_random-uuid(),
-    CONSTRAINT user_public_id_unique UNIQUE(public_id)
+    CONSTRAINT user_public_id_unique UNIQUE(public_id),
 )
