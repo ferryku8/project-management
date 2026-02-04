@@ -22,6 +22,6 @@ func SeedAdmin() {
 	if err := config.DB.FirstOrCreate(&admin, models.User{Email: admin.Email}).Error; err != nil {
 		log.Println("Failed to seed admin", err)
 	} else {
-		log.Panicln("Admin user seeded")
+		log.Println("Admin user seeded")
 	}
 }
