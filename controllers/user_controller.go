@@ -71,7 +71,7 @@ func (c *UserController) GetUser(ctx *fiber.Ctx) error {
 		return utils.NotFound(ctx, "Data Not Found", err.Error())
 	}
 	var userResp models.UserResponse
-	_ = copier.Copy(&userResp, &user)
+	err = copier.Copy(&userResp, &user)
 	if err != nil {
 		return utils.BadRequest(ctx, "Internal Server Error", err.Error())
 	}
