@@ -1,0 +1,2 @@
+ALTER TABLE boards 
+DROP COLUMN IF EXITS due_date;
