@@ -18,7 +18,7 @@ func NewBoardMemberRepository() BoardMemberRepository {
 
 func (r *boardMemberRepository) GetMembers(boardPublicID string) ([]models.User, error) {
 	var users []models.User
-	err := config.DB.Joins("Join board_members ON board_members.user_internal_id = users.interanl_id").
+	err := config.DB.Joins("Join board_members ON board_members.user_internal_id = users.internal_id").
 		Joins("Join boards ON boards.internal_id = board_members.board_internal_id").
 		Where("boards.public_id = ?", boardPublicID).
 		Find(&users).Error
